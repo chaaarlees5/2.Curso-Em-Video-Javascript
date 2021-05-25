@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(26, 25, 25);
+            color: rgb(155, 232, 233);
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudo com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div class='msg'>Clique em mim</div>
+    
+    <script>
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[1] 
+        //número entre colchetes indica qual parágrafo queremos mexer
+        //var divia = document.getElementById('msg') //como o Element está no singular, não precisa de colchetes com número
+        var divia = document.querySelector('div.msg')
+        
+        corpo.style.background = 'black'
+        document.write('Texto sem formatação: ' + p1.innerText + '</br>') //innerText puxa só o texto
+        document.write('Texto formatadin: ' + p1.innerHTML) //innerHTML puxa a formatação junto
+        p1.style.color = 'gold'
+
+        divia.style.background = 'purple'
+        divia.innerText = "Bobo bobo amendobobo ié!"
+    </script>
+</body>
+</html>
