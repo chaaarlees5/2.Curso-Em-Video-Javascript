@@ -3,6 +3,8 @@ var txtnum = document.getElementById('num')
 var lista = document.getElementById('lista')
 var res = document.getElementById('res')
 
+txtnum.focus()
+
 function isNumero(n) {
     if (Number(n) >= 1 && Number(n) <= 100){
         return true
@@ -58,6 +60,8 @@ function finalizar (){
             }
         }
         media = soma / total
+        media = media.toFixed(2)
+        media = media.replace('.',',')
 
         res.innerHTML += `<p>Ao todo temos ${total} números cadastrados.</p>`
         res.innerHTML += `<p>O maior valor informado foi ${maior}</p>`
@@ -67,7 +71,12 @@ function finalizar (){
     }
 }
 
-
+function limpar() {
+    lista.innerHTML = ''
+    res.innerHTML = ''
+    txtnum.value = ''
+    txtnum.focus()
+}
 
 
 
