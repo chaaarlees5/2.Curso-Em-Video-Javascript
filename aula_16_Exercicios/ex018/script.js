@@ -64,10 +64,10 @@ function finalizar (){
         media = media.replace('.',',')
 
         res.innerHTML += `<p>Ao todo temos ${total} números cadastrados.</p>`
-        res.innerHTML += `<p>O maior valor informado foi ${maior}</p>`
-        res.innerHTML += `<p>O menor valor informado foi ${menor}</p>` 
-        res.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>` 
-        res.innerHTML += `<p>A média dos valores digitados é ${media}</p>`
+        res.innerHTML += `<p>O maior valor informado foi o número ${maior}.</p>`
+        res.innerHTML += `<p>O menor valor informado foi o número ${menor}.</p>` 
+        res.innerHTML += `<p>Somando todos os valores, temos o número ${soma}.</p>` 
+        res.innerHTML += `<p>A média dos valores digitados é igual a ${media}.</p>`
     }
 }
 
@@ -75,6 +75,7 @@ function limpar() {
     lista.innerHTML = ''
     res.innerHTML = ''
     txtnum.value = ''
+    numerin = []
     txtnum.focus()
 }
 
